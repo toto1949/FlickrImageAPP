@@ -1,39 +1,88 @@
-# iOS Developer Candidate Code Challenge - Flickr Image Search
+# CVS Flickr APP
 
-This is an iOS application developed as part of the iOS Developer Candidate Code Challenge. The goal was to create a simple app that allows users to search for images on Flickr by tags. The app features a search bar, image grid, image detail view, and a debouncing mechanism for efficient search functionality.
-
-## Demo Video
-
-You can view the demo video of the application here:
-
-[Link to Demo Video]
+A SwiftUI-based iOS application that allows users to search and view images from Flickr's public feed.
 
 ## Features
 
-- **Search for Images**: Users can search for images on Flickr by typing tags into the search bar. The search term can be a single word or a comma-separated list of tags.
-- **Debounced Search**: The search input is debounced to avoid making too many API calls while the user types, improving performance.
-- **Image Grid**: The app displays a grid of thumbnail images that match the search query.
-- **Progress Indicator**: A progress indicator shows while the images are being fetched from the API.
-- **Image Detail View**: Tapping on an image opens a detail view that displays:
-  - The image itself.
-  - The title of the image.
-  - A description of the image.
-  - The author's name.
-  - The formatted published date.
-  - The image’s width and height.
-- **Unit Test**: A unit test is provided for one portion of the code.
+- **Real-time image search** using Flickr's public feed API
+- **Grid layout** displaying thumbnail images
+- **Image detail view** with metadata
+- **Progress indicator** during searches
+- **Continuous search updates** on each keystroke
+- **Supports comma-separated search tags** (e.g., "soccer, food, programming")
 
-## Requirements
+## Technical Requirements
 
-- Xcode 12.0+
-- iOS 14.0+
-- Swift 5.0+
-- SwiftUI
-- Combine (for the debouncing mechanism)
+- **iOS** (latest version)
+- **Swift**
+- **SwiftUI**
+- **Xcode** (latest version)
 
-## Installation
+## API
 
-1. Clone this repository to your local machine:
+The app uses Flickr's public feed API:  
+[https://api.flickr.com/services/feeds/photos_public.gne?format=json&nojsoncallback=1&tags={searchTerm}
+](https://api.flickr.com/services/feeds/photos_public.gne?format=json&nojsoncallback=1&tags={searchTerm})
 
-   ```bash
-   git clone https://github.com/your-username/FlickrImageSearch.git
+- No API key required.
+
+## Core Functionality
+
+### Search View
+
+- **Search bar** for entering search terms
+  - Users can enter **single words** (e.g., "soccer") or **comma-separated tags** (e.g., "soccer, food, programming")
+- **Grid layout** for displaying image thumbnails
+- **Non-blocking progress indicator** during searches
+- **Continuous search updates** after each keystroke or change to the search string
+
+### Detail View
+
+- Full-size **image display**
+- **Title**
+- **Description**
+- **Author information**
+- **Formatted publication date**
+
+## Demo
+
+### Watch Full Demo Video
+
+
+[![Watch the demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://streamable.com/kjjgfe)
+
+## Testing
+
+- Includes **unit tests** covering core functionality.
+
+## Development Guidelines
+
+- Written in **Swift** using **SwiftUI**
+- Follows **Apple's Human Interface Guidelines**
+- Implements **proper error handling**
+- Ensures **thread safety** for API calls
+- Maintains **memory management best practices**
+- Uses **clean coding practices** and consistent formatting
+
+## Getting Started
+
+1. **Clone the repository**
+2. **Open the project in Xcode**
+3. **Build and run** on simulator or device
+
+## Time Allocation
+
+Project is designed to be completed within **3 hours**.
+
+## About
+
+This project is a simple image search application that leverages the Flickr API for fetching images. It is part of an iOS Developer Candidate Code Challenge.
+
+
+### Languages
+
+- **Swift**: 100%
+
+---
+
+© 2025 GitHub, Inc.
